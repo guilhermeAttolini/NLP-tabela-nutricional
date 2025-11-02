@@ -1,0 +1,173 @@
+﻿ingrediente;medida_caseira;gramas;fonte;metodo;confianca
+Abacate;xicara;150.0;FAO INFOODS v2.0;literatura;0.8
+Abobrinha;colher_sopa;8.8;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Abobrinha;xicara;120.0;TACO 2011;literatura;0.8
+Alho;colher_sopa;8.8;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Alho;dente;3.0;TACO 2011;literatura;0.8
+Alho;xicara;140.0;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.5
+Amendoim torrado;colher_sopa;8.8;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Amendoim torrado;xicara;146.0;TACO 2011;literatura;0.8
+Amido de milho;colher_cha;2.5;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Amido de milho;colher_sopa;7.5;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Amido de milho;xicara;120.0;FAO INFOODS v2.0;literatura;0.8
+Amêndoas;colher_sopa;8.8;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Amêndoas;xicara;143.0;FAO INFOODS v2.0;literatura;0.8
+Arroz cru;colher_cha;3.3;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Arroz cru;colher_sopa;13.0;TACO 2011;literatura;0.8
+Arroz cru;xicara;160.0;TACO 2011;literatura;0.8
+Atum em lata (escorrido);xicara;150.0;FAO INFOODS v2.0;literatura;0.8
+Aveia em flocos;colher_cha;1.9;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Aveia em flocos;colher_sopa;8.0;TACO 2011;literatura;0.8
+Aveia em flocos;xicara;90.0;TACO 2011;literatura;0.8
+Azeite de oliva;colher_cha;4.5;FAO INFOODS v2.0;literatura;0.8
+Azeite de oliva;colher_sopa;13.5;FAO INFOODS v2.0;literatura;0.8
+Azeite de oliva;xicara;216.0;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.5
+Açúcar cristal;colher_cha;4.2;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Açúcar cristal;colher_sopa;12.5;TACO 2011;literatura;0.8
+Açúcar cristal;xicara;200.0;TACO 2011;literatura;0.8
+Açúcar de confeiteiro;colher_cha;2.5;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Açúcar de confeiteiro;colher_sopa;7.5;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Açúcar de confeiteiro;xicara;120.0;FAO INFOODS v2.0;literatura;0.8
+Açúcar mascavo;colher_sopa;12.0;TACO 2011;literatura;0.8
+Açúcar mascavo;xicara;180.0;TACO 2011;literatura;0.8
+Açúcar refinado;colher_cha;4.0;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Açúcar refinado;colher_sopa;11.9;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Açúcar refinado;xicara;190.0;TACO 2011;literatura;0.8
+Banana nanica;unidade_media;90.0;TACO 2011;literatura;0.8
+Banana prata;unidade_media;80.0;TACO 2011;literatura;0.8
+Batata doce;colher_sopa;8.8;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Batata doce;unidade_media;180.0;TACO 2011;literatura;0.8
+Batata doce;xicara;140.0;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.5
+Batata inglesa;colher_sopa;8.8;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Batata inglesa;unidade_media;160.0;TACO 2011;literatura;0.8
+Batata inglesa;xicara;140.0;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.5
+Bicarbonato de sódio;colher_cha;5.0;FAO INFOODS v2.0;literatura;0.8
+Brócolis;colher_sopa;8.8;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Brócolis;xicara;90.0;FAO INFOODS v2.0;literatura;0.8
+Cacau em pó;colher_cha;1.8;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Cacau em pó;colher_sopa;6.0;TACO 2011;literatura;0.8
+Cacau em pó;xicara;85.0;TACO 2011 / FAO INFOODS v2.0;literatura;0.8
+Cacau nibs;colher_sopa;10.0;FAO INFOODS v2.0;literatura;0.8
+Café em pó;colher_sopa;5.0;FAO INFOODS v2.0;literatura;0.8
+Café em pó;xicara;82.0;FAO INFOODS v2.0;literatura;0.8
+"Carne bovina (moída; crua)";xicara;220.0;FAO INFOODS v2.0;literatura;0.8
+"Carne suína (cubos; crua)";xicara;180.0;FAO INFOODS v2.0;literatura;0.8
+Castanha-de-caju;colher_sopa;8.8;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Castanha-de-caju;xicara;130.0;TACO 2011;literatura;0.8
+Castanha-do-pará (Brasil);colher_sopa;8.8;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Castanha-do-pará (Brasil);xicara;133.0;TACO 2011;literatura;0.8
+Cebola;colher_sopa;10.0;TACO 2011;literatura;0.8
+Cebola;xicara;160.0;TACO 2011;literatura;0.8
+Cenoura;colher_sopa;8.8;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Cenoura;xicara;130.0;TACO 2011;literatura;0.8
+Chia;colher_sopa;8.8;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Chia;xicara;140.0;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.5
+Chocolate em pó (50%);colher_sopa;8.0;TACO 2011;literatura;0.8
+Coco ralado seco;colher_sopa;7.0;FAO INFOODS v2.0;literatura;0.8
+Couve-flor;colher_sopa;8.8;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Couve-flor;xicara;100.0;FAO INFOODS v2.0;literatura;0.8
+Creme de avelã;colher_sopa;20.0;FAO INFOODS v2.0;literatura;0.8
+Creme de leite;colher_cha;5.1;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Creme de leite;colher_sopa;15.0;FAO INFOODS v2.0;literatura;0.8
+Creme de leite;xicara;245.0;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.5
+Farinha de amêndoas;colher_cha;2.5;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Farinha de amêndoas;colher_sopa;7.5;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Farinha de amêndoas;xicara;96.0;FAO INFOODS v2.0;literatura;0.8
+Farinha de arroz;xicara;160.0;FAO INFOODS v2.0;literatura;0.8
+Farinha de coco;colher_cha;2.5;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Farinha de coco;colher_sopa;7.5;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Farinha de coco;xicara;112.0;FAO INFOODS v2.0;literatura;0.8
+Farinha de mandioca;xicara;150.0;TACO 2011;literatura;0.8
+Farinha de rosca;colher_cha;2.5;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Farinha de rosca;colher_sopa;7.5;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Farinha de rosca;xicara;100.0;TACO 2011;literatura;0.8
+Farinha de trigo;colher_cha;2.5;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Farinha de trigo;colher_sopa;7.5;TACO 2011;literatura;0.8
+Farinha de trigo;xicara;120.0;TACO 2011;literatura;0.8
+Farinha de trigo;xicara_cheia (compactada);150.0;FAO INFOODS v2.0;literatura;0.8
+Farinha de trigo integral;xicara;120.0;TACO 2011;literatura;0.8
+Feijão carioca cru;colher_cha;3.5;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Feijão carioca cru;colher_sopa;10.6;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Feijão carioca cru;xicara;170.0;TACO 2011;literatura;0.8
+Feijão preto cru;colher_cha;3.5;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Feijão preto cru;colher_sopa;10.6;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Feijão preto cru;xicara;170.0;TACO 2011;literatura;0.8
+Fermento biológico seco;colher_cha;3.1;FAO INFOODS v2.0;literatura;0.8
+Fermento químico (pó);colher_cha;4.0;FAO INFOODS v2.0;literatura;0.8
+Frango (peito cru);xicara;140.0;FAO INFOODS v2.0;literatura;0.8
+Fubá (farinha de milho);xicara;130.0;TACO 2011;literatura;0.8
+Gergelim;colher_sopa;9.0;FAO INFOODS v2.0;literatura;0.8
+Gergelim;xicara;140.0;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.5
+Iogurte grego;colher_cha;5.1;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Iogurte grego;colher_sopa;20.0;FAO INFOODS v2.0;literatura;0.8
+Iogurte grego;xicara;245.0;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.5
+Iogurte natural;colher_cha;5.1;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Iogurte natural;colher_sopa;15.3;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Iogurte natural;xicara;245.0;TACO 2011;literatura;0.8
+Laranja pera;unidade_media;140.0;TACO 2011;literatura;0.8
+Leite condensado;colher_cha;6.2;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Leite condensado;colher_sopa;20.0;FAO INFOODS v2.0;literatura;0.8
+Leite condensado;xicara;300.0;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.5
+Leite de coco;colher_sopa;15.0;FAO INFOODS v2.0;literatura;0.8
+Leite desnatado;xicara;245.0;FAO INFOODS v2.0;literatura;0.8
+Leite integral;colher_cha;5.1;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Leite integral;colher_sopa;16.0;FAO INFOODS v2.0;literatura;0.8
+Leite integral;xicara;244.0;TACO 2011 / USDA/FAO densidade ~1.03 g/ml;literatura;0.8
+Limão tahiti;unidade_media;60.0;TACO 2011;literatura;0.8
+Linhaça;colher_sopa;8.8;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Linhaça;xicara;140.0;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.5
+Manga;unidade_media;200.0;TACO 2011;literatura;0.8
+Manteiga;colher_sopa;14.0;TACO 2011 / FAO INFOODS v2.0;literatura;0.8
+Margarina;colher_sopa;14.0;TACO 2011;literatura;0.8
+Maçã;unidade_media;130.0;TACO 2011;literatura;0.8
+Mel;colher_cha;7.0;FAO INFOODS v2.0;literatura;0.8
+Mel;colher_sopa;21.0;FAO INFOODS v2.0;literatura;0.8
+Mel;xicara;336.0;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.5
+Melado de cana;colher_sopa;20.0;FAO INFOODS v2.0;literatura;0.8
+Milho de pipoca (grão);xicara;200.0;FAO INFOODS v2.0;literatura;0.8
+Molho de soja (shoyu);colher_cha;5.0;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Molho de soja (shoyu);colher_sopa;16.0;FAO INFOODS v2.0;literatura;0.8
+Molho de soja (shoyu);xicara;240.0;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.5
+Morango;xicara;150.0;FAO INFOODS v2.0;literatura;0.8
+Nozes;colher_sopa;8.8;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Nozes;xicara;100.0;FAO INFOODS v2.0;literatura;0.8
+Ovo de galinha;unidade;50.0;TACO 2011;literatura;0.8
+Passas (uva);xicara;145.0;FAO INFOODS v2.0;literatura;0.8
+Pera;unidade_media;160.0;TACO 2011;literatura;0.8
+Pimentão;colher_sopa;8.8;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Pimentão;xicara;150.0;TACO 2011;literatura;0.8
+Polpa de tomate;colher_cha;5.0;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Polpa de tomate;colher_sopa;15.0;FAO INFOODS v2.0;literatura;0.8
+Polpa de tomate;xicara;240.0;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.5
+Polvilho azedo;colher_cha;2.5;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Polvilho azedo;colher_sopa;7.5;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Polvilho azedo;xicara;120.0;FAO INFOODS v2.0;literatura;0.8
+Polvilho doce;colher_cha;2.5;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Polvilho doce;colher_sopa;7.5;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Polvilho doce;xicara;120.0;FAO INFOODS v2.0;literatura;0.8
+Pão de forma;unidade;30.0;Estimativa comum (fatia média ~30 g);estimado;0.4
+Quinoa crua;xicara;170.0;FAO INFOODS v2.0;literatura;0.8
+Sal (refinado);colher_cha;6.0;TACO 2011 / FAO;literatura;0.8
+Sal (refinado);colher_sopa;18.0;FAO INFOODS v2.0;literatura;0.8
+Sal grosso;colher_cha;7.0;FAO INFOODS v2.0;literatura;0.8
+Semente de chia;colher_sopa;12.0;FAO INFOODS v2.0;literatura;0.8
+Semente de linhaça;colher_sopa;10.0;FAO INFOODS v2.0;literatura;0.8
+Sêmola (semolina);xicara;167.0;FAO INFOODS v2.0;literatura;0.8
+Tapioca (goma hidratada);colher_cha;3.8;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Tapioca (goma hidratada);colher_sopa;12.0;TACO 2011;literatura;0.8
+Tapioca (goma hidratada);xicara;180.0;TACO 2011;literatura;0.8
+Tomate;colher_sopa;8.8;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Tomate;unidade_media;120.0;TACO 2011;literatura;0.8
+Tomate;xicara;180.0;TACO 2011;literatura;0.8
+Uva;xicara;150.0;FAO INFOODS v2.0;literatura;0.8
+Vinagre;colher_cha;5.0;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.4
+Vinagre;colher_sopa;15.0;FAO INFOODS v2.0;literatura;0.8
+Vinagre;xicara;240.0;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.5
+Água;colher_cha;5.0;FAO INFOODS v2.0;literatura;0.8
+Água;colher_sopa;15.0;FAO INFOODS v2.0;literatura;0.8
+Água;xicara;240.0;TACO 2011 / FAO INFOODS v2.0;literatura;0.8
+Óleo vegetal;colher_cha;4.6;FAO INFOODS v2.0;literatura;0.8
+Óleo vegetal;colher_sopa;13.8;FAO INFOODS v2.0;literatura;0.8
+Óleo vegetal;xicara;216.0;Estimativa por densidade/categoria (FAO INFOODS v2.0 / TACO 2011);estimado;0.5
+;;;;;
+

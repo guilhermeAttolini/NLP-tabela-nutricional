@@ -1,0 +1,22 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./jobs:/app/jobs
+      - ./app/data:/app/app/data
+    environment:
+      - JOBS_DIR=/app/jobs
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - OPENAI_MODEL=${OPENAI_MODEL}
+  worker:
+    build: .
+    command: python -m app.workers.worker
+    volumes:
+      - ./jobs:/app/jobs
+      - ./app/data:/app/app/data
+    environment:
+      - JOBS_DIR=/app/jobs
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - OPENAI_MODEL=${OPENAI_MODEL}

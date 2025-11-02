@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+pydantic>=2
+python-multipart
+beautifulsoup4
+lxml
+trafilatura
+readability-lxml
+httpx
+pillow
+pandas
+rapidfuzz
+pyyaml
+openai>=1.0.0
+reportlab
