@@ -1,4 +1,3 @@
-
 from __future__ import annotations
 import pandas as pd
 from rapidfuzz import process, fuzz
@@ -10,32 +9,41 @@ def load_tbca(path: str) -> pd.DataFrame:
     except Exception:
         df = pd.read_csv(path, sep=";", encoding="latin1", engine="python", na_filter=False)
 
+    RENAME_MAP_TBCA = {
+        "codigo": "codigo",
+        "nome": "descricao",
+        "categoria": "categoria",
+        "energia (kcal)": "kcal_100g",
+        "carboidrato disponível (g)": "carbs_g_100g",
+        "proteína (g)": "protein_g_100g",
+        "lipídios (g)": "fat_g_100g",
+        "ácidos graxos saturados (g)": "saturated_fat_g_100g",
+        "ácidos graxos trans (g)": "trans_fat_g_100g",
+        "fibra alimentar (g)": "fiber_g_100g",
+        "sódio (mg)": "sodium_mg_100g",
+        "açúcar de adição (g)": "sugar_g_100g",
+    }
+
     rename_map = {}
     for col in df.columns:
         l = str(col).strip().lower()
-        if l in {"alimento_pt", "alimento", "descricao", "descrição"}:
-            rename_map[col] = "descricao"
-        elif l in {"kcal", "energia_kcal", "energia"}:
-            rename_map[col] = "kcal_100g"
-        elif l.startswith("carbo"):
-            rename_map[col] = "carbs_g_100g"
-        elif l.startswith("prote"):
-            rename_map[col] = "protein_g_100g"
-        elif l.startswith("gordu") or l.startswith("lipid") or l == "gordura" or "fat" in l:
-            rename_map[col] = "fat_g_100g"
-        elif "sodio" in l or "sodium" in l or l == "na":
-            rename_map[col] = "sodium_mg_100g"
+        if l in RENAME_MAP_TBCA:
+            rename_map[col] = RENAME_MAP_TBCA[l]
 
     df = df.rename(columns=rename_map)
 
-    for c in ["descricao", "kcal_100g", "protein_g_100g", "fat_g_100g", "carbs_g_100g", "sodium_mg_100g"]:
-        if c not in df.columns:
-            df[c] = 0
+    required_cols = [
+        "descricao", "kcal_100g", "protein_g_100g", "fat_g_100g", "carbs_g_100g", 
+        "sodium_mg_100g", "fiber_g_100g", "saturated_fat_g_100g", "trans_fat_g_100g", "sugar_g_100g"
+    ]
 
-    for c in ["kcal_100g", "protein_g_100g", "fat_g_100g", "carbs_g_100g", "sodium_mg_100g"]:
+    for c in required_cols:
+        if c not in df.columns:
+            df[c] = 0      
+
+    for c in required_cols[1:]:
         df[c] = (
             df[c].astype(str)
-                .str.replace(".", "", regex=False)
                 .str.replace(",", ".", regex=False)
         )
         df[c] = pd.to_numeric(df[c], errors="coerce").fillna(0.0)
@@ -120,6 +128,7 @@ def to_grams(qty: float, unit: str, name: str, dens_df: pd.DataFrame) -> float:
 def compute_nutrition(items: List[Dict], tbca_df: pd.DataFrame, dens_df: pd.DataFrame) -> Dict:
     out_items = []
     total_kcal = total_p = total_f = total_c = total_na = 0.0
+    total_fib = total_sat = total_trans = total_sug = 0.0
 
     for it in items:
         name = it["name"]
@@ -130,16 +139,32 @@ def compute_nutrition(items: List[Dict], tbca_df: pd.DataFrame, dens_df: pd.Data
         if target and (tbca_df["descricao_norm"] == target).any():
             row = tbca_df.loc[tbca_df["descricao_norm"] == target].iloc[0]
 
-        kcal = float(row["kcal_100g"]) * grams / 100 if row is not None else 0.0
-        p = float(row["protein_g_100g"]) * grams / 100 if row is not None else 0.0
-        f = float(row["fat_g_100g"]) * grams / 100 if row is not None else 0.0
-        c = float(row["carbs_g_100g"]) * grams / 100 if row is not None else 0.0
-        na = float(row["sodium_mg_100g"]) * grams / 100 if row is not None else 0.0
+        def get_val(col):
+            # Verifica se a coluna existe e se a linha foi encontrada
+            if row is None or col not in row: return 0.0
+            # A verificação de tipo (float(row[col])) é importante para o cálculo, 
+            # mas como já fizemos o to_numeric no load_tbca, a conversão deve ser segura.
+            return float(row[col]) * grams / 100
+
+        # Cálculo dos nutrientes
+        kcal = get_val("kcal_100g")
+        p = get_val("protein_g_100g")
+        f = get_val("fat_g_100g")
+        c = get_val("carbs_g_100g")
+        na = get_val("sodium_mg_100g")
+        
+        # NOVOS CÁLCULOS
+        fib = get_val("fiber_g_100g")
+        sat = get_val("saturated_fat_g_100g")
+        trans = get_val("trans_fat_g_100g")
+        sug = get_val("sugar_g_100g")
 
         total_kcal += kcal; total_p += p; total_f += f; total_c += c; total_na += na
+        total_fib += fib; total_sat += sat; total_trans += trans; total_sug += sug
         out_items.append({
             "name": name, "amount_g": grams, "mapping": (row["descricao"] if row is not None else None),
-            "kcal": kcal, "protein_g": p, "fat_g": f, "carbs_g": c, "sodium_mg": na
+            "kcal": kcal, "protein_g": p, "fat_g": f, "carbs_g": c, "sodium_mg": na,
+            "fiber_g": fib, "saturated_fat_g": sat, "trans_fat_g": trans, "sugar_g": sug # NOVOS CAMPOS
         })
 
     return {
@@ -148,6 +173,10 @@ def compute_nutrition(items: List[Dict], tbca_df: pd.DataFrame, dens_df: pd.Data
         "fat_g": total_f,
         "carbs_g": total_c,
         "sodium_mg": total_na,
+        "fiber_g": total_fib,          
+        "saturated_fat_g": total_sat,   
+        "trans_fat_g": total_trans,     
+        "sugar_g": total_sug,           
         "per_serving": None,
         "items": out_items
     }
