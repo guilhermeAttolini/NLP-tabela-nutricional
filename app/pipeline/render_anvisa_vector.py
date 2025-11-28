@@ -1,4 +1,3 @@
-
 from __future__ import annotations
 from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
@@ -23,9 +22,10 @@ def _pct(val, dv):
 DV = {
     "energy_kcal": 2000.0,
     "carbs_g": 300.0,
-    "protein_g": 75.0,
+    "added_sugars_g": 50.0, # Novo padrão
+    "protein_g": 50.0,      # Alterado na nova lei (antes era 75)
     "fat_g": 55.0,
-    "sat_fat_g": 22.0,
+    "sat_fat_g": 20.0,      # Alterado na nova lei (antes era 22)
     "fiber_g": 25.0,
     "sodium_mg": 2000.0,
 }
@@ -37,7 +37,7 @@ def _fmt(x, unit):
         return f"{x:.0f} kcal"
     if unit == "mg":
         return f"{x:.0f} mg"
-    return f"{x:.1f} g"
+    return f"{x:.1f} g".replace(".", ",")
 
 def render_anvisa_vector_pdf(summary: Dict[str, Any], out_pdf: str, porcao_label="receita inteira (estimada)"):
     c = canvas.Canvas(out_pdf, pagesize=A4)
@@ -56,12 +56,12 @@ def render_anvisa_vector_pdf(summary: Dict[str, Any], out_pdf: str, porcao_label
 
     c.setFont(font, 16)
     y = top - 8*mm
-    c.drawString(left, y, "INFORMAÇÃO NUTRICIONAL")
+    c.drawString(left + 2*mm, y, "INFORMAÇÃO NUTRICIONAL")
     y -= 6*mm
     c.setLineWidth(2); c.line(left, y, right, y); y -= 6*mm
 
     c.setFont(font, 12)
-    c.drawString(left, y, f"Porção: {porcao_label}")
+    c.drawString(left + 2*mm, y, f"Porção: {porcao_label}")
     y -= 6*mm
     c.line(left, y, right, y); y -= 6*mm
 
@@ -83,6 +83,10 @@ def render_anvisa_vector_pdf(summary: Dict[str, Any], out_pdf: str, porcao_label
     protein= float(summary.get("protein_g", 0.0))
     fat    = float(summary.get("fat_g", 0.0))
     sodium = float(summary.get("sodium_mg", 0.0))
+    fiber    = float(summary.get("fiber_g", 0.0))
+    sat_fat  = float(summary.get("saturated_fat_g", 0.0))
+    trans_fat= float(summary.get("trans_fat_g", 0.0))
+    sugar    = float(summary.get("sugar_g", 0.0))
 
     total_mass = 0.0
     for it in summary.get("items", []):
@@ -100,14 +104,15 @@ def render_anvisa_vector_pdf(summary: Dict[str, Any], out_pdf: str, porcao_label
         return value
 
     rows = [
-        ("Valor energético",  ("kcal", energy)),
-        ("Carboidratos",      ("g", carbs)),
-        ("Proteínas",         ("g", protein)),
-        ("Gorduras totais",   ("g", fat)),
-        ("Gorduras saturadas",("g", None)),
-        ("Gorduras trans",    ("g", None)),
-        ("Fibra alimentar",   ("g", None)),
-        ("Sódio",             ("mg", sodium)),
+        ("Valor energético",      ("kcal", energy)),
+        ("Carboidratos",          ("g", carbs)),
+        ("Açúcares adicionados",  ("g", sugar)),    # Novo (Opcional: Indentar visualmente)
+        ("Proteínas",             ("g", protein)),
+        ("Gorduras totais",       ("g", fat)),
+        ("Gorduras saturadas",    ("g", sat_fat)),  # Novo
+        ("Gorduras trans",        ("g", trans_fat)),# Novo
+        ("Fibra alimentar",       ("g", fiber)),    # Novo
+        ("Sódio",                 ("mg", sodium)),
     ]
 
     c.setFont(font, 11)
@@ -119,20 +124,30 @@ def render_anvisa_vector_pdf(summary: Dict[str, Any], out_pdf: str, porcao_label
 
         v100  = per100(total_val)
         vport = per_portion(total_val)
+        vd = None
         if label == "Valor energético":
             vd = _pct(vport or 0, DV["energy_kcal"])
         elif label == "Carboidratos":
             vd = _pct(vport or 0, DV["carbs_g"])
+        elif label == "Açúcares adicionados":
+            vd = _pct(vport or 0, DV["added_sugars_g"])
         elif label == "Proteínas":
             vd = _pct(vport or 0, DV["protein_g"])
         elif label == "Gorduras totais":
             vd = _pct(vport or 0, DV["fat_g"])
+        elif label == "Gorduras saturadas":
+            vd = _pct(vport or 0, DV["sat_fat_g"])
+        elif label == "Fibra alimentar":
+            vd = _pct(vport or 0, DV["fiber_g"])
         elif label == "Sódio":
             vd = _pct(vport or 0, DV["sodium_mg"])
-        else:
-            vd = None
+        # Gorduras Trans não possui VD
 
-        c.drawString(col_item, y, label)
+        indent = 0
+        if label in ["Gorduras saturadas", "Gorduras trans", "Açúcares adicionados"]:
+            indent = 4*mm # Pequeno recuo
+
+        c.drawString(col_item + indent, y, label)
         c.drawRightString(col_100g + 25*mm, y, _fmt(v100, unit))
         c.drawRightString(col_porc + 25*mm, y, _fmt(vport, unit))
         c.drawRightString(col_vd + 15*mm, y, ("N/D" if vd is None else f"{vd:.0f}%"))
